@@ -1,6 +1,13 @@
 # block-ui.js
 
+<p>
+<a href="https://github.com/vzool/block-ui.js/blob/main/README.ar.md"><img src="https://img.shields.io/badge/lang-ar-green.svg" alt="ar" data-canonical-src="https://img.shields.io/badge/lang-en-green.svg" style="max-width: 100%;"></a>
+<a href="https://npmjs.org/package/block-ui.js" title="View this project on NPM"><img src="https://img.shields.io/npm/v/block-ui.js.svg" alt="NPM version" /></a>
+</p>
+
 A simple but powerful vanilla pure javascript plugin to block user interaction with a page while an action is being performed in the background.
+
+![Screenshot](screenshot.gif)
 
 ## Installation
 
@@ -27,7 +34,7 @@ yarn add block-ui.js
 ### Import
 
 ```javascript
-import BlockUI from 'block-ui.js';
+import 'block-ui.js';
 ```
 
 ### Initialize
@@ -44,6 +51,12 @@ There should be an element with `id` identifier in the page to block it with loa
 
 ```javascript
 BlockUI("container").show(); // not #container
+```
+
+### Block UI Status
+
+```javascript
+BlockUI("container").blocked(); // true or false
 ```
 
 ### Update Messages
@@ -63,6 +76,10 @@ You can use `padding-top` or `padding-bottom` to move the message up or down acc
 ```javascript
 BlockUI("container").hide();
 ```
+
+### Reference
+
+https://onezeronull.com/2013/03/25/simple-element-blocker-with-and-without-jquery/#comment-842
 
 ### License
 

@@ -1,6 +1,6 @@
 {
   "name": "block-ui.js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Library to block UI elements with loading image",
   "main": "block-ui.js",
   "scripts": {
@@ -11,9 +11,11 @@
     "url": "git+https://github.com/vzool/block-ui.js.git"
   },
   "keywords": [
-    "BlockUI",
-    "Pure Javascript",
-    "Javascript"
+    "blockui",
+    "blockui-plugin",
+    "pure-javascript",
+    "javascript",
+    "front-end"
   ],
   "author": "Abdelaziz Elrashed <npm.com@vzool.me>",
   "license": "ISC",
