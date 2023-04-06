@@ -1,0 +1,24 @@
+{
+  "name": "block-ui.js",
+  "version": "0.0.1",
+  "description": "Library to block UI elements with loading image",
+  "main": "block-ui.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vzool/block-ui.js.git"
+  },
+  "keywords": [
+    "BlockUI",
+    "Pure Javascript",
+    "Javascript"
+  ],
+  "author": "Abdelaziz Elrashed <npm.com@vzool.me>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vzool/block-ui.js/issues"
+  },
+  "homepage": "https://github.com/vzool/block-ui.js#readme"
+}

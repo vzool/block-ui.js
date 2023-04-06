@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>block-ui.js (Example)</title>
+</head>
+<body>
+    <div id="container">
+        <h1>block-ui.js (Example)</h1>
+        <button id="btn">Block Me (for 3 seconds)</button>
+        <button id="btn2">Block Me (with messages)</button>
+    </div>
+    <script defer>
+        const btn = document.getElementById('btn');
+        btn.addEventListener('click', () => {
+            console.log(BlockUI("container").show());
+            setTimeout(() => {
+                console.log(BlockUI("container").hide());
+            }, 3000);
+        });
+
+        const btn2 = document.getElementById('btn2');
+        btn2.addEventListener('click', async () => {
+            console.log(BlockUI("container").show());
+            console.log(BlockUI("container").message("<h1 style='padding-top: 190px;'>Loading...</h1>"));
+            await delay(1500);
+            for(var i = 0; i < 101; i++) {
+                console.log(BlockUI("container").message(`<h1 style='padding-top: 190px;'>${i}%</h1>`));
+                await delay(100);
+            }
+            await delay(1500);
+            console.log(BlockUI("container").message("<h1 style='padding-top: 190px;'>Done</h1>"));
+            await delay(1500);
+            console.log(BlockUI("container").hide());
+        });
+        
+        function delay(time) { return new Promise(resolve => setTimeout(resolve, time)); }
+    </script>
+    <script src="block-ui.js"></script>
+</body>
+</html>
