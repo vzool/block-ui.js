@@ -1,6 +1,6 @@
 <div dir="rtl">
 
-<div style="text-align: center;">
+<div align="center" style="text-align: center;">
 
 ![شعار المكتبة](images/logo.png)
 # block-ui.js

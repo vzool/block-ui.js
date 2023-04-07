@@ -1,5 +1,5 @@
 
-<div style="text-align: center;">
+<div align="center" style="text-align: center;">
 
 ![Library Logo](images/logo.png)
 # block-ui.js
