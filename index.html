@@ -11,10 +11,14 @@
         <h1>block-ui.js (Example)</h1>
         <button id="btn">Block Me (for 3 seconds)</button>
         <button id="btn2">Block Me (with messages)</button>
+        <button id="btn3">Block Me (without gif)</button>
+        <button id="btn4">Block Me (External gif)</button>
     </div>
     <script defer>
         const btn = document.getElementById('btn');
         btn.addEventListener('click', () => {
+            document.vzool_blockui_image = 'images/loader.gif';
+            document.vzool_blockui_background = '#121111';
             console.log(BlockUI("container").show());
             setTimeout(() => {
                 console.log(BlockUI("container").hide());
@@ -23,6 +27,8 @@
 
         const btn2 = document.getElementById('btn2');
         btn2.addEventListener('click', async () => {
+            document.vzool_blockui_image = 'images/loader.gif';
+            document.vzool_blockui_background = '#121111';
             console.log(BlockUI("container").show());
             console.log(BlockUI("container").message("<h1 style='padding-top: 190px;'>Loading...</h1>"));
             await delay(1500);
@@ -34,6 +40,32 @@
             console.log(BlockUI("container").message("<h1 style='padding-top: 190px;'>Done</h1>"));
             await delay(1500);
             console.log(BlockUI("container").hide());
+        });
+
+        const btn3 = document.getElementById('btn3');
+        btn3.addEventListener('click', async () => {
+            document.vzool_blockui_image = '';
+            console.log(BlockUI("container").show());
+            console.log(BlockUI("container").message("<h1>Loading...</h1>"));
+            await delay(1500);
+            for(var i = 0; i < 101; i++) {
+                console.log(BlockUI("container").message(`<h1>${i}%</h1>`));
+                await delay(100);
+            }
+            await delay(1500);
+            console.log(BlockUI("container").message("<h1>Done</h1>"));
+            await delay(1500);
+            console.log(BlockUI("container").hide());
+        });
+
+        const btn4 = document.getElementById('btn4');
+        btn4.addEventListener('click', () => {
+            document.vzool_blockui_image = 'https://raw.githubusercontent.com/vzool/block-ui.js/main/images/cool-loading-animated-gif-1.gif';
+            document.vzool_blockui_background = '#66CEFF';
+            console.log(BlockUI("container").show());
+            setTimeout(() => {
+                console.log(BlockUI("container").hide());
+            }, 3000);
         });
         
         function delay(time) { return new Promise(resolve => setTimeout(resolve, time)); }

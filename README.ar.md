@@ -1,15 +1,26 @@
 <div dir="rtl">
 
+<div style="text-align: center;">
+
+![شعار المكتبة](images/logo.png)
 # block-ui.js
 
 <p>
 <a href="https://github.com/vzool/block-ui.js/blob/main/README.md"><img src="https://img.shields.io/badge/lang-en-green.svg" alt="en" data-canonical-src="https://img.shields.io/badge/lang-en-green.svg" style="max-width: 100%;"></a>
 <a href="https://npmjs.org/package/block-ui.js" title="View this project on NPM"><img src="https://img.shields.io/npm/v/block-ui.js.svg" alt="NPM رقم الاصدارة في مدير حزم مكتبات" /></a>
 </p>
+</div>
 
-مكون إضافي بسيط ولكنه قوي بالجافا سكريبت خالص وذلك لعرض صفحة انتظار تمنع المستخدم من التفاعل مع الصفحة أثناء تنفيذ إجراءات متعددة في الخلفية.
 
-![لقطة شاشة](screenshot.gif)
+مكون إضافي بسيط مكون من 39 سطر برمجي فقط، ولكنه قوي مبرمج بلغة الجافا سكريبت (Javascript) خالص وذلك لعرض صفحة انتظار تمنع المستخدم من التفاعل مع الصفحة بالكامل أو جزء منها أثناء تنفيذ عملية أو عدت عمليات في الخلفية.
+![لقطة شاشة](images/screenshot.gif)
+
+يمكنك تغيير كل شيء، بدءًا من ملف `gif` المحمل ولون الخلفية ولون النص والرسالة، هذا ينطبق على كل أو جزء من الصفحة.
+لذلك، يمكنك استخدامه في أي مشروع، حتى لو كانت صفحة `HTML` ثابتة بسيطة.
+
+###### الأمثلة (Examples) https://vzool.github.io/block-ui.js
+
+<div dir="rtl">
 
 ## التثبيت (Installation)
 
@@ -86,9 +97,30 @@ BlockUI("container").hide();
 
 <div dir="rtl">
 
-### المرجع (Reference)
+### الوثائق البرمجية (API Documentation)
+</div>
 
-https://onezeronull.com/2013/03/25/simple-element-blocker-with-and-without-jquery/#comment-842
+الاسم (Name) | النوع (Type) | الخيارات (Parameter) | الافتراضي (Default) | الوصف (Description)
+--- | --- | --- | --- | ---
+`BlockUI()` | الباني (constructor) | `id` | - | يقوم بإنشاء مقترح (instance) من الكائن
+`show()` | طريقة مقترحة (method) | - | - | تعرض واجهة حجب الصفحة
+`hide()` | طريقة مقترحة (method) | - | - | تخفي واجهة حجب الصفحة
+`blocked()` | طريقة مقترحة (method) | - | - | تحقق من حالة حجب الصفحة
+`message()` | طريقة مقترحة (method) | `message` | - | تحديث رسائل حجب الصفحة
+`document.vzool_blockui_image` | متغير (variable) | - | `loader.gif` | تحديد ملف `gif` للمحمل
+`document.vzool_blockui_background` | متغير (variable) | - | `#121111` | تحديد لون الخلفية
+`document.vzool_blockui_color` | متغير (variable) | - | `#ffffff` | تحديد لون النص
+
+للمزيد من المعلومات، يرجى قراءة البرمجة المصدرية (source code).
+
+<div dir="rtl">
+
+### المراجع (References)
+
+- https://onezeronull.com/2013/03/25/simple-element-blocker-with-and-without-jquery
+- https://www.pinterest.com/pin/224828206383260450
+- https://www.iconfinder.com/icons/8674984/ic_fluent_eye_tracking_off_regular_icon
+- https://smashinghub.com/10-cool-loading-animated-gif.htm
 
 ### الترخيص (License)
 
