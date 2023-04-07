@@ -1,6 +1,6 @@
 {
   "name": "block-ui.js",
-  "version": "0.0.21",
+  "version": "0.0.3",
   "description": "Library to block UI elements with loading image",
   "main": "block-ui.js",
   "scripts": {
